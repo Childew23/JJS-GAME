@@ -13,9 +13,9 @@ const retry = document.querySelector('#retry');
 let jumpSFX = new Audio("https://ia903405.us.archive.org/21/items/jump_20210424/jump.mp3");
 let gameOverSFX = new Audio("audio\\Game Over Sound Effect.mp3");
 let BGM = new Audio("audio\\prod test.mp3");
-jumpSFX.volume = 0.3;
-gameOverSFX.volume = 0.1;
-BGM.volume = 0.1;
+jumpSFX.volume = 0.15;
+gameOverSFX.volume = 0.05;
+BGM.volume = 0.05;
 
 //Variables pour le jeu
 let player = null;          
