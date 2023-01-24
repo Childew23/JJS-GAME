@@ -29,7 +29,7 @@ let scoreIncrement = 0;     //Palier de score qui va faire augmenter la difficul
 
 //Initialise la partie
 function startGame(){
-    BGM.load();
+    BGM.load();                                         //Va rejouer la BGM à chaque nouvelle partie
     BGM.play();
     player = new Player(25,canvas.height-50,50,'red');  //Initialisation de la position du joueur
     arrayObstacles = [];
