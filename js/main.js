@@ -12,7 +12,10 @@ const retry = document.querySelector('#retry');
 //SFX
 let jumpSFX = new Audio("https://ia903405.us.archive.org/21/items/jump_20210424/jump.mp3");
 let gameOverSFX = new Audio("audio\\Game Over Sound Effect.mp3");
-gameOverSFX.volume = 0.2;
+let BGM = new Audio("audio\\prod test.mp3");
+jumpSFX.volume = 0.3;
+gameOverSFX.volume = 0.1;
+BGM.volume = 0.1;
 
 //Variables pour le jeu
 let player = null;          
@@ -26,6 +29,8 @@ let scoreIncrement = 0;     //Palier de score qui va faire augmenter la difficul
 
 //Initialise la partie
 function startGame(){
+    BGM.load();
+    BGM.play();
     player = new Player(25,canvas.height-50,50,'red');  //Initialisation de la position du joueur
     arrayObstacles = [];
     obstacleSpeed = 5;
@@ -107,6 +112,7 @@ function animate(){
 
         //Si le joueur touche un obstacle
         if(collision(player, obstacle)){
+            BGM.pause();
             gameOverSFX.play();
             cardScore.textContent = score;
             card.style.display = "block";
